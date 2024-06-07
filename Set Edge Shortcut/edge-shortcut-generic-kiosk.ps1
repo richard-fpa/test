@@ -64,5 +64,6 @@ $arguments = '--no-first-run --kiosk-idle-timeout-minutes=30 --kiosk https://clo
 if (Test-Path -Path $lnkpath) {
     if ((Get-Shortcut -path $lnkpath).Arguments -ne $arguments) {
         Set-Shortcut -LinkPath $lnkpath -Arguments $arguments
+    #Test update
     }
 }
