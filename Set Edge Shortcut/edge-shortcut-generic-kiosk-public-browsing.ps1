@@ -59,7 +59,7 @@ function Set-Shortcut {
 }
 
 $lnkpath = 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Edge.lnk'
-$arguments = '--no-first-run --kiosk-idle-timeout-minutes=30 --kiosk http://myapps.microsoft.com/ https://cloud.contentraven.com/fisherpaykel/login https://www.google.com/ --edge-kiosk-type=public-browsing'
+$arguments = '--no-first-run --kiosk-idle-timeout-minutes=30 --kiosk http://myapps.microsoft.com/ https://www.google.com/ --edge-kiosk-type=public-browsing'
 
 if (Test-Path -Path $lnkpath) {
     if ((Get-Shortcut -path $lnkpath).Arguments -ne $arguments) {
